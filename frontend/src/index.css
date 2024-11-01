@@ -162,6 +162,7 @@ header {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  
  }
 .item-container {
     width: 250px;
