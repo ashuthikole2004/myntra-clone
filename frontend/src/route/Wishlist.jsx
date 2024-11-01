@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import WishlistItem from "../components/wishlistItem";
+import WishlistItem from "../components/WishlistItem";
 function Wishlist() {
   const wishlist = useSelector((store) => store.wishlist);
   const items = useSelector((store) => store.items);
@@ -27,7 +27,7 @@ function Wishlist() {
           <div className="wishlist-items-container">
             {!isSearchPerformed ? (
               wishlistItem.map((item) => (
-                <WishlistItem key={item.id} item={item} />
+                <wishlistItem key={item.id} item={item} />
               ))
             ) : searchResults.length > 0 ? (
               searchResults.map((item) => (
