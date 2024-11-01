@@ -16,7 +16,7 @@ const FetchItems = () => {
 
     dispatch(fetchStatusActions.markFetchStarted());
 
-    fetch("http://localhost:8080/items", { signal })
+    fetch("https://myntra-clone-qds1.onrender.com/items", { signal })
       .then((res) => res.json())
       .then(({ items }) => {
         dispatch(fetchStatusActions.markFetchDone());
