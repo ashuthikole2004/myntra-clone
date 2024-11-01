@@ -82,7 +82,13 @@ header {
     width: 200px;
     justify-content: space-evenly;
 }
-
+.action_bar a {
+  color: #020202;
+  text-decoration: none;
+  font-weight: 600;
+  /* font-size: 0.95em; */
+  /* transition: color 0.3s ease-in-out; */
+}
 .action_container {
     display: flex;
     flex-direction: column;
@@ -119,17 +125,24 @@ header {
 .sale_item {
     width: 250px;
 }
-
+/* 
 .footer_container {
     padding: 30px 0px 40px 0px;
     background: #FAFBFC;
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .footer_column {
     display: flex;
     flex-direction: column;
+}
+
+.footer-row{
+  display: flex;
+    flex-direction: row;
 }
 
 .footer_column h3 {
@@ -143,7 +156,7 @@ header {
     font-size: 15px;
     text-decoration: none;
     padding-bottom: 5px;
-}
+} */
 
 .copyright {
     color: #94969f;
@@ -759,4 +772,210 @@ a.action_container:link {
 
 .action-con{
   margin-bottom: 15px;
+}
+/* 
+.footer-image{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.footer-image img{
+  border-radius: 5px;
+}
+
+.footer-text{
+  margin-top: 1.6rem;
+}
+
+.footer-icon{
+  display: flex;
+  gap: 15px;
+}
+
+.footer-origional{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 400px;
+  margin-top: 25px;
+}
+
+.footer-origional-img{
+  display: flex;
+}
+.footer-origional-img p{
+  margin-top: 10px;
+}
+
+.footer-origional-img img{
+  width: 80px;
+} */
+/* General Styling */
+.footer_container {
+  padding: 40px;
+  background-color: #FAFBFC;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  text-align: center;
+}
+
+.footer-row {
+  display: grid;
+  gap: 30px;
+  width: 100%;
+}
+
+.footer-additional {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 60%;
+  width: 100%;
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+
+.footer_column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+.footer_column_experience{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: left;
+}
+
+.footer_column h3 {
+  font-size: 1.2em;
+  color: #333;
+  font-weight: 600;
+}.footer_column_experience h3 {
+  font-size: 1.2em;
+  color: #333;
+  font-weight: 600;
+  text-align: left;
+}
+
+.footer_column a {
+  color: #666;
+  text-decoration: none;
+  font-size: 0.95em;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer_column a:hover {
+  color: #000;
+}
+
+.footer-image {
+  display: flex;
+  justify-content: left;
+  gap: 15px;
+  margin: 10px 0;
+}
+
+.footer-image img {
+  width: 120px;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+
+.footer-icon {
+  display: flex;
+  gap: 20px;
+  font-size: 1.8em;
+  color: #333;
+  margin-top: 10px;
+  transition: color 0.3s ease;
+}
+.footer-icon a {
+  color: #666;
+  text-decoration: none;
+  font-size: 0.95em;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer-icon a:hover {
+  color: #000;
+}
+.footer-icon:hover {
+  color: #000;
+}
+
+.footer-commitments {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+.footer-commitment-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 300px;
+}
+
+.footer-commitment-item img {
+  width: 50px;
+}
+
+.footer-commitment-item p {
+  font-size: 0.9em;
+  color: #333;
+  line-height: 1.4;
+}
+
+hr {
+  margin: 20px 0;
+  border: none;
+  border-top: 1px solid #ddd;
+  width: 100%;
+}
+
+.copyright {
+  text-align: center;
+  font-size: 0.85em;
+  color: #666;
+}
+
+/* Responsive Adjustments */
+@media (min-width: 768px) {
+  .footer-row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer-additional {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer_container {
+    padding: 50px 60px;
+  }
+
+  .footer-row, .footer-additional {
+    gap: 40px;
+  }
+
+  .footer_column h3 {
+    font-size: 1.3em;
+  }
+
+  .footer_column a {
+    font-size: 1em;
+  }
 }
