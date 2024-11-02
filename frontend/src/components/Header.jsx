@@ -51,6 +51,7 @@ const Header = () => {
             <Link to="#">Men</Link>
             <Link to="#">Women</Link>
             <Link to="#">Kids</Link>
+            <Link to="#">Home & Living</Link>
             <Link to="#">Beauty</Link>
             <Link to="#">
               Studio <sup>New</sup>

@@ -882,6 +882,7 @@ a.action_container:link {
 
 .footer-image {
   display: flex;
+  flex-wrap:wrap;
   justify-content: left;
   gap: 15px;
   margin: 10px 0;
