@@ -1,4 +1,3 @@
-import React from "react";
 import { MdOutlineLightMode, MdLightMode } from "react-icons/md";
 
 function BackgroundColor({ color }) {

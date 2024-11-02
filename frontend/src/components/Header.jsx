@@ -29,10 +29,9 @@ const Header = () => {
     setColor((prevColor) => !prevColor);
   };
 
-  // Apply the background color change on the body element when `color` changes
   useEffect(() => {
     document.body.style.backgroundColor = color ? "#333" : "#fff";
-    document.body.style.color = color ? "#fff" : "#000"; // Adjust text color for better readability
+    document.body.style.color = color ? "#fff" : "#000"; 
   }, [color]);
 
   return (
