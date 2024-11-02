@@ -188,7 +188,7 @@ header {
 .item-image {
   width: 450px; 
   height: 350px;
-  object-fit: cover;
+  /* object-fit: cover; */
 }
 
 .rating {
