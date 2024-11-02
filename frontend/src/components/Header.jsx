@@ -3,24 +3,37 @@ import { BiHappyHeartEyes } from "react-icons/bi";
 import { BsHandbagFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { searchActions } from "../store/searchSlice";
+import BackgroundColor from "./BackgroundColor";
 
 const Header = () => {
   const bag = useSelector((store) => store.bag);
   const wishlist = useSelector((store) => store.wishlist);
   const [isOpen, setIsOpen] = useState(false);
+  const [color, setColor] = useState(false);
 
   const input = useRef();
+  const dispatch = useDispatch();
+
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
-  const dispatch = useDispatch();
   const handleSearchItem = () => {
-    let searchInput = input.current.value;
+    const searchInput = input.current.value;
     dispatch(searchActions.handleSearch(searchInput));
   };
+
+  const toggleColorMode = () => {
+    setColor((prevColor) => !prevColor);
+  };
+
+  // Apply the background color change on the body element when `color` changes
+  useEffect(() => {
+    document.body.style.backgroundColor = color ? "#333" : "#fff";
+    document.body.style.color = color ? "#fff" : "#000"; // Adjust text color for better readability
+  }, [color]);
 
   return (
     <>
@@ -39,7 +52,6 @@ const Header = () => {
             <Link to="#">Men</Link>
             <Link to="#">Women</Link>
             <Link to="#">Kids</Link>
-            <Link to="#">Home & Living</Link>
             <Link to="#">Beauty</Link>
             <Link to="#">
               Studio <sup>New</sup>
@@ -61,26 +73,29 @@ const Header = () => {
               <span className="action_name">Profile</span>
             </Link>
             <Link className="action_container" to="wishlist">
-              <span >
+              <span>
                 <BiHappyHeartEyes />
               </span>
               <span className="action_name">Wishlist</span>
               <span className="bag-item-count">{wishlist.length}</span>
             </Link>
             <Link className="action_container" to="bag">
-              <span >
+              <span>
                 <BsHandbagFill />
               </span>
               <span className="action_name">Bag</span>
               <span className="bag-item-count">{bag.length}</span>
             </Link>
+            <div onClick={toggleColorMode}>
+              <BackgroundColor color={color} />
+            </div>
           </div>
           <button className="hamburger" onClick={toggleMenu}>
             &#9776;
           </button>
         </div>
-        <div className="second">
-          {isOpen && (
+        {isOpen && (
+          <div className="second">
             <div className="hidden-sm custom-button">
               <button className="close-button" onClick={toggleMenu}>
                 &times;
@@ -105,9 +120,6 @@ const Header = () => {
                   Kids
                 </Link>
                 <Link to="#" onClick={toggleMenu} className="link">
-                  Home & Living
-                </Link>
-                <Link to="#" onClick={toggleMenu} className="link">
                   Beauty
                 </Link>
                 <Link to="#" onClick={toggleMenu} className="link">
@@ -115,8 +127,8 @@ const Header = () => {
                 </Link>
               </div>
             </div>
-          )}
-        </div>
+          </div>
+        )}
       </header>
     </>
   );

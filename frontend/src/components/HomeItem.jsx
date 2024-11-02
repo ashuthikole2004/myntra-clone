@@ -48,7 +48,7 @@ function HomeItem({ item }) {
           <AiOutlineHeart />
         </button>
       )}
-      <div>
+      <div className="back-color">
         <div className="rating">
           {item.rating.stars} ⭐ | {item.rating.count}
         </div>

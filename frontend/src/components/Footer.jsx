@@ -13,7 +13,6 @@ const Footer = () => {
               <a href="#">Men</a>
               <a href="#">Women</a>
               <a href="#">Kids</a>
-              <a href="#">Home & Living</a>
               <a href="#">Beauty</a>
               <a href="#">Gift Card</a>
               <a href="#">Myntra Insider</a>
