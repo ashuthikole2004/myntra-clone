@@ -9,7 +9,7 @@ const searchSlice = createSlice({
   reducers: {
     setItems: (state, action) => {
       state.items = action.payload;
-      console.log(action.payload);
+      // console.log(action.payload);
     },
     handleSearch: (state, action) => {
       const lowerCaseSearchTerm = action.payload.toLowerCase();
