@@ -27,7 +27,7 @@ function Wishlist() {
           <div className="wishlist-items-container">
             {!isSearchPerformed ? (
               wishlistItem.map((item) => (
-                <wishlistItem key={item.id} item={item} />
+                <WishlistItem key={item.id} item={item} />
               ))
             ) : searchResults.length > 0 ? (
               searchResults.map((item) => (

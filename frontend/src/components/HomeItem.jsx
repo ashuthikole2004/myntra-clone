@@ -32,44 +32,44 @@ function HomeItem({ item }) {
   };
 
   return (
-    <Link to="recommended" className="item-link" state={{ item }}>
-      <div className="item-container home-item-container">
+    <div className="item-container home-item-container">
+      <Link to="recommended" className="item-link" state={{ item }}>
         <img className="item-image" src={item.image} alt="item image" />
-        {wishlist.includes(item.id) ? (
-          <button
-            className="wishlist-button btn1"
-            onClick={handleRemoveFromWishList}
-          >
-            <IoMdHeartDislike />
-          </button>
-        ) : (
-          <button className="wishlist-button" onClick={handleAddToWishList}>
-            <AiOutlineHeart />
-          </button>
-        )}
-        <div>
-          <div className="rating">
-            {item.rating.stars} ⭐ | {item.rating.count}
-          </div>
-          <div className="company-name">{item.company}</div>
-          <div className="item-name">{item.item_name}</div>
-          <div className="price">
-            <span className="current-price">Rs {item.current_price}</span>
-            <span className="original-price">Rs {item.original_price}</span>
-            <span className="discount">({item.discount_percentage}% OFF)</span>
-          </div>
+      </Link>
+      {wishlist.includes(item.id) ? (
+        <button
+          className="wishlist-button btn1"
+          onClick={handleRemoveFromWishList}
+        >
+          <IoMdHeartDislike />
+        </button>
+      ) : (
+        <button className="wishlist-button" onClick={handleAddToWishList}>
+          <AiOutlineHeart />
+        </button>
+      )}
+      <div>
+        <div className="rating">
+          {item.rating.stars} ⭐ | {item.rating.count}
         </div>
-        {bag.includes(item.id) ? (
-          <button className="btn-remove-bag" onClick={handleRemoveFromBag}>
-            <MdDelete /> Remove from Bag
-          </button>
-        ) : (
-          <button className="btn-add-bag" onClick={handleAddToBag}>
-            <MdAddCircleOutline /> Add to Bag
-          </button>
-        )}
+        <div className="company-name">{item.company}</div>
+        <div className="item-name">{item.item_name}</div>
+        <div className="price">
+          <span className="current-price">Rs {item.current_price}</span>
+          <span className="original-price">Rs {item.original_price}</span>
+          <span className="discount">({item.discount_percentage}% OFF)</span>
+        </div>
       </div>
-    </Link>
+      {bag.includes(item.id) ? (
+        <button className="btn-remove-bag" onClick={handleRemoveFromBag}>
+          <MdDelete /> Remove from Bag
+        </button>
+      ) : (
+        <button className="btn-add-bag" onClick={handleAddToBag}>
+          <MdAddCircleOutline /> Add to Bag
+        </button>
+      )}
+    </div>
   );
 }
 
