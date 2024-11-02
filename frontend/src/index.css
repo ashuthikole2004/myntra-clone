@@ -177,10 +177,12 @@ header {
   flex-wrap: wrap;
   max-width: 500px;
   width: 100%;
+ 
  }
 .item-container {
     width: 250px;
     margin: 10px;
+    background-color: white;
 }.item-container-home {
     width: 250px;
     margin: 10px;
@@ -341,6 +343,7 @@ a.action_container:link {
     font-size: 13px;
     line-height: 3.12857143;
     margin-bottom: 25px;
+    background-color: white;
     /* margin: 0 auto; */
   }
 
@@ -987,13 +990,13 @@ hr {
 }
 
 .dark-mode {
-  background-color: #333;
+  background-color: #000000;
   color: #fff;
 }
 
 .background-toggle {
   cursor: pointer;
   font-size: 1.8rem;
-  margin-bottom: 10px;
+  margin-bottom: 14px;
   border-radius: 50%;
 }
