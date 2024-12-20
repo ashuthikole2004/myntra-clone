@@ -14,17 +14,13 @@ function bag() {
       setIsSearchPerformed(true);
     }
   }, [searchResults]);
-  return (
+  return (    
     <div>
       <center>
         <div className="bag-page">
-          {!isSearchPerformed ? (
-            bagItems.map((item) => <BagItem key={item.id} item={item} />)
-          ) : searchResults.length > 0 ? (
-            searchResults.map((item) => <BagItem key={item.id} item={item} />)
-          ) : (
-            <h3>Sorry, we couldn't find any results for your search.</h3>
-          )}
+          {searchResults.map((item) => (
+            <BagItem key={item.id} item={item} />
+          ))}
           <div>
             <BagSummary />
           </div>
