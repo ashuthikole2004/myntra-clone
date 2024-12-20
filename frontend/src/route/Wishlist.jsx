@@ -25,17 +25,9 @@ function Wishlist() {
             </h6>
           </div>
           <div className="wishlist-items-container">
-            {!isSearchPerformed ? (
-              wishlistItem.map((item) => (
-                <WishlistItem key={item.id} item={item} />
-              ))
-            ) : searchResults.length > 0 ? (
-              searchResults.map((item) => (
-                <WishlistItem key={item.id} item={item} />
-              ))
-            ) : (
-              <h3>Sorry, we couldn't find any results for your search.</h3>
-            )}
+            {wishlistItem.map((item) => (
+              <WishlistItem key={item.id} item={item} />
+            ))}
           </div>
         </div>
       </main>

@@ -31,6 +31,10 @@ function HomeItem({ item }) {
     dispatch(wishlistActions.removeFromWishList(item.id));
   };
 
+  // const handleOnHover=()=>{
+  //   const wishItem=document.querySelector(".wishlist-button");
+  //   wishItem.classList.remove("display-none");
+  // }
   return (
     <div className="item-container home-item-container">
       <Link to="recommended" className="item-link" state={{ item }}>

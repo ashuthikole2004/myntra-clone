@@ -23,6 +23,7 @@ const Header = () => {
   const handleSearchItem = () => {
     const searchInput = input.current.value;
     dispatch(searchActions.handleSearch(searchInput));
+    
   };
 
   const toggleColorMode = () => {
@@ -31,7 +32,7 @@ const Header = () => {
 
   useEffect(() => {
     document.body.style.backgroundColor = color ? "#333" : "#fff";
-    document.body.style.color = color ? "#fff" : "#000"; 
+    document.body.style.color = color ? "#fff" : "#000";
   }, [color]);
 
   return (

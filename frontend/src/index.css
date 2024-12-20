@@ -621,6 +621,10 @@ a.action_container:link {
   /* transition: background 0.3s; */
 }
 
+.display-none{
+  display:none;
+}
+
 .wishlist-button:hover {
   background: rgba(255, 255, 255, 1); 
 }
